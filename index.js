@@ -14,11 +14,12 @@ const managerArray = ['None']
 const db = mysql.createConnection(
     {
         host: 'localhost',
-        user: 'user',
+        user: 'root',
+    
         password: 'password',
-        database: 'work_db'
+        database: 'info_db'
     },
-    console.log(`work_db database`)
+    console.log(`info_db database`)
 );
 
 function init() {
@@ -49,6 +50,62 @@ function init() {
         addEmployee();
     }
     }) 
+}
+function viewDepartment() {
+
+    var query =
+        `SELECT department_name AS Department, id AS ID FROM department`
+
+    db.query(query, function (err, res) {
+        if (err) throw err;
+
+        console.table(res);
+        console.log("Viewing departments by id\n");
+
+        init();
+    });
+}
+
+function viewRoles() {
+
+    var query =
+        `SELECT r.title AS Title, r.id AS ID, r.salary AS Salary, d.department_name AS Department 
+        FROM roles r
+        LEFT JOIN  department d
+        ON r.department_id = d.id
+        `
+
+    db.query(query, function (err, res) {
+        if (err) throw err;
+
+        console.table(res);
+        console.log("Viewing roles!\n");
+
+        init();
+    });
+}
+
+function viewEmployees() {
+
+    var query =
+        `SELECT e.id, e.first_name, e.last_name, r.title, d.department_name AS department, r.salary, CONCAT(m.first_name, ' ', m.last_name) AS manager
+        FROM employee e
+        LEFT JOIN roles r
+        ON e.role_id = r.id
+        LEFT JOIN department d
+        ON d.id = r.department_id
+        LEFT JOIN employee m
+        ON m.id = e.manager_id`
+
+    db.query(query, function (err, res) {
+        if (err) throw err;
+
+        console.table(res);
+        console.log("Viewing Employees!\n");
+
+        init();
+    });
+
 }
 
 function addDepartment () {

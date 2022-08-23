@@ -1,24 +1,25 @@
 {
-    "name": "track-my-employee",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/joshuar2155/track-my-employee.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/joshuar2155/track-my-employee/issues"
-    },
-    "homepage": "https://github.com/joshuar2155/track-my-employee#readme",
-    "dependencies": {
-      "express": "^4.18.1",
-      "inquirer": "^8.2.4",
-      "mysql2": "^2.3.3"
-    }
+  "name": "track-my-employee",
+  "version": "1.0.0",
+  "description": "- The motivation for this project is to build and track profile's for employees.\r - I built this project to sharpen my abilities with newfile types and new syntax.\r - This project solves tracking employees and departments in a method that is applicable to real world websites.\r - I learned how to begin utilizing back end web development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuar2155/track-my-employee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuar2155/track-my-employee/issues"
+  },
+  "homepage": "https://github.com/joshuar2155/track-my-employee#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3"
   }
+}
