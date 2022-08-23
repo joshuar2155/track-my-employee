@@ -1,4 +1,4 @@
-# <track-my-employee>
+# track-my-employee
 
 ## Description
 
@@ -10,13 +10,7 @@
 
 ## Usage
 
-Follow the prompts from running the server to add and remove employees to the website.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![This is a screenshot of the command line](./images/image.png)
 
 ## Credits
 
@@ -48,3 +42,4 @@ SOFTWARE.
 
 # Links
 https://github.com/joshuar2155/track-my-employee
+https://drive.google.com/file/d/1xI00tGtgINOnL35pe-b9FnVm7Y6_vxz0/view

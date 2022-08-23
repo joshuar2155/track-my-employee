@@ -35,13 +35,13 @@ function init() {
     ]).then((data) => {
     if(data.choices === choices[0]) {
         console.log('Departments');
-        return init();
+        
     } else if(data.choices === choices[1]) {
         console.log('Roles');
-        return init();
+        
     } else if(data.choices === choices[2]) {
         console.log('Employees');
-        return init();
+        
     } else if(data.choices === choices[3]) {
         addDepartment();
     } else if(data.choices === choices[4]) {
@@ -73,7 +73,7 @@ function addRole () {
         }
     ]).then((data) =>{
      console.log(data);
-     return init
+     init();
     })
 };
 
@@ -105,7 +105,7 @@ function addEmployee() {
     ]).then((data) => {
      console.log(data);
      managerArray.push(data.firstName);
-     return init()
+     init()
     })
 
 };
